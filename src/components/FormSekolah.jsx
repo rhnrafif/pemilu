@@ -45,8 +45,8 @@ export function FormSekolah() {
 
 
   return (
-    <div className='h-screen flex gap-5 container max-w-lg mx-auto pt-2 relative justify-center items-center'>
-        <form className=' w-[350px] bg-[#202121] p-5 flex flex-col items-center gap-5 text-white rounded-md relative px-3' autoComplete='off' onSubmit={handleSubmit} >
+    <div className='h-screen flex gap-5 container max-w-md mx-auto pt-2 relative justify-center items-center'>
+        <form className=' w-[350px] bg-[#202121] p-5 flex flex-col items-center gap-5 text-white rounded-md relative px-4' autoComplete='off' onSubmit={handleSubmit} >
 
           <div className='absolute top-1 right-0 text-red-500 cursor-pointer' onClick={()=>{
             setIsInput(false)
@@ -57,12 +57,12 @@ export function FormSekolah() {
           </div>
 
             <h1 className='text-lg font-semibold'>Tulis Nama Sekolah / Pangkalan </h1>
-            <div className='flex gap-4 items-center'>
-                <label htmlFor="id">Nomor Peserta</label>
-                <input type="number" id='id' className='h-8 rounded-sm text-black p-2' placeholder='Wajib isi dengan angka' />
+            <div className='w-[340px] flex flex-col  gap-4 items-center'>
+                <label htmlFor="id" className='text-lg'>Nomor Peserta</label>
+                <input type="number" id='id' className='h-8 rounded-sm text-black p-2 text-center' placeholder='Wajib isi dengan angka' />
             </div>
-            <div className='flex gap-4 items-center'>
-                <label htmlFor="nama">Nama Sekolah</label>
+            <div className=' w-[340px] flex flex-col gap-4 items-center'>
+                <label htmlFor="nama" className='text-lg'>Nama Sekolah</label>
                 <input type="text" id='nama' className='h-8 rounded-sm text-black p-2' />
             </div>
             <div className='mt-3'>
@@ -110,8 +110,8 @@ export function FormSekolah2() {
 
 
   return (
-    <div className='h-screen flex gap-5 container max-w-lg mx-auto pt-2 relative justify-center items-center bg-[#21212121]'>
-        <form className=' bg-[#202121] p-5 flex flex-col items-center gap-5 text-white rounded-md relative' autoComplete='off' onSubmit={handleSubmit} >
+    <div className='h-screen flex gap-5 container max-w-md mx-auto pt-2 relative justify-center items-center'>
+        <form className=' w-[350px] bg-[#202121] p-5 flex flex-col items-center gap-5 text-white rounded-md relative' autoComplete='off' onSubmit={handleSubmit} >
 
           <div className='absolute top-1 right-0 text-red-500 cursor-pointer' onClick={()=>{
             setIsInput(false)
@@ -122,12 +122,12 @@ export function FormSekolah2() {
           </div>
 
             <h1 className='text-lg font-semibold'>Tulis Nama Sekolah / Pangkalan </h1>
-            <div className='flex gap-4 items-center'>
-                <label htmlFor="id">Nomor Peserta</label>
-                <input type="number" id='id' className='h-8 rounded-sm text-black p-2' />
+            <div className='w-[340px] flex gap-4 flex-col items-center'>
+                <label htmlFor="id" className='text-lg'>Nomor Peserta</label>
+                <input type="number" id='id' className='h-8 rounded-sm text-black p-2 text-center' />
             </div>
-            <div className='flex gap-4 items-center'>
-                <label htmlFor="nama">Nama Sekolah</label>
+            <div className='w-[340px] flex-col flex gap-4 items-center'>
+                <label htmlFor="nama" className='text-lg'>Nama Sekolah</label>
                 <input type="text" id='nama' className='h-8 rounded-sm text-black p-2' />
             </div>
             <div className='mt-3'>
