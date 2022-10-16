@@ -46,7 +46,7 @@ export function FormSekolah() {
 
   return (
     <div className='h-screen flex gap-5 container max-w-lg mx-auto pt-2 relative justify-center items-center'>
-        <form className=' bg-[#202121] p-5 flex flex-col items-center gap-5 text-white rounded-md relative' autoComplete='off' onSubmit={handleSubmit} >
+        <form className=' w-[350px] bg-[#202121] p-5 flex flex-col items-center gap-5 text-white rounded-md relative px-3' autoComplete='off' onSubmit={handleSubmit} >
 
           <div className='absolute top-1 right-0 text-red-500 cursor-pointer' onClick={()=>{
             setIsInput(false)
