@@ -93,15 +93,13 @@ export default function Sd() {
   
 
   return (
-    <div className='container max-w-lg mx-auto pt-8'>
-       <div className='flex justify-center gap-3 mt-4 mb-5'>
+    <div className='container max-w-md mx-auto pt-8 px-8'>
+       <div className='flex justify-center gap-4 mt-4 mb-5'>
             <Button name={'SMP/MTs'} link={'/'} click={()=>{
               setIsSekolah(false)
               navigate('/')
             }} />
-            <ButtonRefresh name={'Refresh'} click={()=>{
-              navigate('/')
-            }} />
+            
             <Button name={'SD/MI'} link={'/'} click={()=>{
               setIsSekolah(true)
               navigate('/')

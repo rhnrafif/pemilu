@@ -90,9 +90,9 @@ export default function Dashboard() {
 
   return (
     <>
-      <div className='container max-w-lg mx-auto pt-8 relative'>
+      <div className='container max-w-md mx-auto pt-8 relative'>
         <JudulDashboard />
-        <div className='flex justify-center gap-3 mt-4 mb-5'>
+        <div className='flex justify-center gap-2 mt-4 mb-5'>
               <Button name={'SMP/MTs'} link={'/'} click={()=>{
                 setIsAdmin(false)
                 navigate('/')
@@ -105,7 +105,7 @@ export default function Dashboard() {
                 navigate('/')
               }}/>
         </div>
-        <div className='w-[350px] h-full bg-[#202121] flex flex-col items-center py-6 rounded-md gap-2 mx-auto cursor-pointer'>
+        <div className='w-[350px] h-full bg-[#202121] flex flex-col items-center py-6 rounded-md gap-2 mx-auto cursor-pointer px-2'>
           
           {isLogin && (
             <div className='w-[200px] h-[40px] flex justify-center items-center text-slate-100'>
