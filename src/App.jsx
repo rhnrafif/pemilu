@@ -49,7 +49,6 @@ export default function App() {
         </>
       ) : ( //if jika admin, route ini yang ditampilkan
         <>
-        
         {isInput ? (
           <>
             {isSmp ? (

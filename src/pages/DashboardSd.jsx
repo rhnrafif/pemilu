@@ -10,6 +10,7 @@ import {getDatabase, ref, onValue, set} from 'firebase/database'
 import {UserAdmin} from '../user/AdminProvider'
 import {InputPeserta} from '../user/InputProvider'
 import {SmpInput} from '../user/SmpProvider'
+import { Sekeleton, SekeletonBlack } from '../components/Sekeleton'
 
 export default function Dashboard() {
 
@@ -105,15 +106,13 @@ export default function Dashboard() {
                 navigate('/')
               }}/>
         </div>
-        <div className='w-[350px] h-full bg-[#202121] flex flex-col items-center py-6 rounded-md gap-2 mx-auto cursor-pointer px-2'>
           
           {isLogin && (
-            <div className='w-[200px] h-[40px] flex justify-center items-center text-slate-100'>
-              <h1>Loading.. Please wait</h1>
-            </div>
+            <SekeletonBlack />
           )}
           
           {!isLogin && (
+          <div className='w-[350px] h-full bg-[#202121] flex flex-col items-center py-6 rounded-md gap-2 mx-auto cursor-pointer px-2'>
             <>
               <JudulTabelDashboard name={'SD/MI Se-derajat'} />
           
@@ -130,9 +129,9 @@ export default function Dashboard() {
                 )
               })}
             </>
+          </div>
           )}
           
-        </div>
         
       </div>
       

@@ -10,6 +10,7 @@ import {getAuth, GoogleAuthProvider, signInWithPopup} from 'firebase/auth'
 import {getDatabase, ref, onValue} from 'firebase/database'
 import {UserSekolah} from '../user/SekolahProvider'
 import {UserSet} from '../user/User'
+import { Sekeleton } from '../components/Sekeleton'
 
 export default function Sd() {
 
@@ -107,34 +108,32 @@ export default function Sd() {
             }} />
        </div>
 
-       <div className='w-full  max-w-[400px] bg-slate-100  flex flex-col items-center mx-auto rounded-lg pb-4 pt-3 '>
-
         {isLogin && (
-          <div className='w-[200px] h-[40px] flex justify-center items-center text-orange-800'>
-            <h1>Loading.. Please wait</h1>
-          </div>
+          <Sekeleton />
         )}
-        {!isLogin && (
-          <>
-            <Judul name={'SD/MI Se-derajat'}/>
-            
-            <DataTable>
-              
-                  { data?.map((e)=>{
-                    // console.info(e)
-                    return(
-                      
-                        <TabelIsi key={e.id} name={e.sekolah} score={e.score}  />
-                        
-                    )
-                  })}
 
-            </DataTable>
-          </>
+        {!isLogin && (
+          <div className='w-full  max-w-[400px] bg-slate-100  flex flex-col items-center mx-auto rounded-lg pb-4 pt-3 '>
+              <>
+                <Judul name={'SD/MI Se-derajat'}/>
+                
+                <DataTable>
+                  
+                      { data?.map((e)=>{
+                        // console.info(e)
+                        return(
+                          
+                            <TabelIsi key={e.id} name={e.sekolah} score={e.score}  />
+                            
+                        )
+                      })}
+
+                </DataTable>
+              </>
+          </div>
         )}
       
 
-       </div>
 
        <div className='flex justify-center items-center my-5'>
             <ButtonAdmin onClick={handleLogin} name={'ADMIN'} />
