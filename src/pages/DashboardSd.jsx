@@ -91,7 +91,7 @@ export default function Dashboard() {
 
   return (
     <>
-      <div className='container max-w-md mx-auto pt-8 relative'>
+      <div className='container max-w-md mx-auto pt-8'>
         <JudulDashboard />
         <div className='flex justify-center gap-2 mt-4 mb-5'>
               <Button name={'SMP/MTs'} link={'/'} click={()=>{
@@ -136,7 +136,7 @@ export default function Dashboard() {
       </div>
       
       {modal && (
-          <div className='w-screen h-full absolute top-0 left-0 z-10 bg-[#00000097] text-white mx-auto flex justify-center items-center'>
+          <div className='w-screen h-full fixed top-0 left-0 z-10 bg-[#00000097] text-white mx-auto flex justify-center items-center'>
             {!confirm && (
               <div className='h-[200px]'>
                 <Modal name={dataSekolah} succes={succes} onClick={()=>{

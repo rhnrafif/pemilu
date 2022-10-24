@@ -3,7 +3,7 @@ import React from 'react'
 export default function Modal({name, onClick, succes}) {
   return (
     <>
-        <div className='w-[280px] h-[180px] py-4 bg-slate-300 flex flex-col gap-4 justify-center items-center rounded-md '>
+        <div className='w-[280px] h-[180px] py-4 bg-slate-300 flex flex-col gap-4 justify-center items-center rounded-md'>
           
             <h1 className='text-xl text-[#212121]'>{succes}</h1>
 
