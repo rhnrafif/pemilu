@@ -67,7 +67,7 @@ export default function Sd() {
 
     //validasi kedua
       let admin = prompt('Mohon tulis Identitas Anda ?')
-      if(admin !== 'kristal22'){
+      if(admin !== 'AiutDerT'){
         alert('Maaf, akses hanya bisa untuk Panitia Kristal 2022')
         return
       }
