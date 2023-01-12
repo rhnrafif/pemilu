@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react'
 import axios from 'axios'
-import Button, {ButtonRefresh} from '../components/Button'
+import {ButtonLogout} from '../components/Button'
 import ButtonAdmin from '../components/ButtonAdmin'
 import DataTable from '../components/DataTable'
 import Judul from '../components/Judul'
@@ -11,6 +11,7 @@ import {getDatabase, ref, onValue} from 'firebase/database'
 import {UserSekolah} from '../user/SekolahProvider'
 import {UserSet} from '../user/User'
 import { Sekeleton } from '../components/Sekeleton'
+import VoteResult from '../components/VoteResult'
 
 export default function Sd() {
 
@@ -33,7 +34,7 @@ export default function Sd() {
     
     const db = getDatabase()
 
-    const starCountRef = ref(db, 'votesd')
+    const starCountRef = ref(db, 'jayabuana')
     onValue(starCountRef, (snapshot)=>{
       const item = snapshot.val()
 
@@ -52,60 +53,11 @@ export default function Sd() {
 
   },[])
 
-  
-
-
-  // login google
-  const handleLogin =()=>{
-    
-    // validasi awal
-    if(user){
-      navigate('/')
-      setUser(true)
-      return
-    }
-
-    //validasi kedua
-      let admin = prompt('Mohon tulis Identitas Anda ?')
-      if(admin !== 'AiutDerT'){
-        alert('Maaf, akses hanya bisa untuk Panitia Kristal 2022')
-        return
-      }
-
-
-    const auth = getAuth()
-    const provider = new GoogleAuthProvider()
-
-    signInWithPopup(auth, provider)
-    .then((res)=>{
-
-      localStorage.setItem('user', JSON.stringify(res.user))
-      setUser(true)
-      setIsSekolah(true)
-      navigate('/')
-    })
-    .catch((err)=>{
-      alert ('Terjadi kesalahan, Silahkan coba lagi')
-      // console.error(err)
-    })
-
-  }
-
-  
 
   return (
     <div className='container max-w-md mx-auto pt-8 px-8'>
        <div className='flex justify-center gap-4 mt-4 mb-5'>
-            <Button name={'SMP/MTs'} link={'/'} click={()=>{
-              setIsSekolah(false)
-              navigate('/')
-            }} />
-            
-            <Button name={'SD/MI'} link={'/'} click={()=>{
-              setIsSekolah(true)
-              navigate('/')
-
-            }} />
+            <h1 className='text-2xl font-semibold text-black text-center'>Hasil Pemilihan Ketua OSIS 2023</h1>
        </div>
 
         {isLogin && (
@@ -113,22 +65,12 @@ export default function Sd() {
         )}
 
         {!isLogin && (
-          <div className='w-full  max-w-[400px] bg-slate-100  flex flex-col items-center mx-auto rounded-lg pb-4 pt-3 '>
+          <div className='w-full  max-w-[400px] bg-slate-100  flex flex-col items-center mx-auto rounded-lg pb-4 pt-3 gap-3 '>
               <>
-                <Judul name={'SD/MI Se-derajat'}/>
-                
-                <DataTable>
+                {data?.map((e)=>(
                   
-                      { data?.map((e)=>{
-                        // console.info(e)
-                        return(
-                          
-                            <TabelIsi key={e.id} name={e.sekolah} score={e.score}  />
-                            
-                        )
-                      })}
-
-                </DataTable>
+                  <VoteResult key={e.nomor} namaKetua={e.namaKetua} namaWakil={e.namaWakil} fotoKetua={e.fotoKetua} fotoWakil={e.fotoWakil} score={e.score}/>
+                ))}
               </>
           </div>
         )}
@@ -136,7 +78,11 @@ export default function Sd() {
 
 
        <div className='flex justify-center items-center my-5'>
-            <ButtonAdmin onClick={handleLogin} name={'ADMIN'} />
+            <ButtonLogout name={"LOGOUT"} click={()=>{
+              localStorage.clear()
+              navigate('/')
+              window.location.reload()
+            }} />
        </div>
     </div>
   )

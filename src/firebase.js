@@ -5,13 +5,13 @@ import { getDatabase } from 'firebase/database'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAgdRrzKsfjeL1DQ0yPjY4lV0RsoKr0FZ4",
-  authDomain: "appvote-e925f.firebaseapp.com",
-  databaseURL: "https://appvote-e925f-default-rtdb.firebaseio.com",
-  projectId: "appvote-e925f",
-  storageBucket: "appvote-e925f.appspot.com",
-  messagingSenderId: "1086384860726",
-  appId: "1:1086384860726:web:bae74133cf1979f7333297"
+  apiKey: "AIzaSyDW9nnnPzbcUVF7a7D_VLwMoMvo71FryiI",
+  authDomain: "jayabuana-cc7d9.firebaseapp.com",
+  databaseURL: "https://jayabuana-cc7d9-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "jayabuana-cc7d9",
+  storageBucket: "jayabuana-cc7d9.appspot.com",
+  messagingSenderId: "219975896737",
+  appId: "1:219975896737:web:86581b10fdd79ba3972ae0"
 };
 
 // Initialize Firebase

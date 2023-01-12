@@ -1,9 +1,7 @@
 import React, {useEffect, useState, useContext} from 'react'
 import { Route, Routes} from 'react-router-dom'
-import Dashboard from './pages/Dashboard'
 import DashboardSd from './pages/DashboardSd'
 import Sd from './pages/Sd'
-import Smp from './pages/Smp'
 import {getAuth, onAuthStateChanged} from 'firebase/auth'
 import {auth, database} from './firebase'
 import {FormSekolah, FormSekolah2} from './components/FormSekolah'
@@ -36,50 +34,17 @@ export default function App() {
     <>
       {!user ? ( //if jika bukan admin, maka route ini yang ditampilkan
         <>
-          {isSekolah ? ( //rank sd sebagai tampilan kedua
-            <Routes>
-              <Route path='/' element={<Sd />} />
-            </Routes>
-          ) : ( //rank smp sebagai tampilan utama
-            <Routes>
-              <Route path='/' element={<Smp />} />
-            </Routes>
-              )}
-      
+          <Routes>
+              <Route path='/' element={<DashboardSd />} />
+          </Routes>
         </>
       ) : ( //if jika admin, route ini yang ditampilkan
         <>
-        {isInput ? (
-          <>
-            {isSmp ? (
-              <Routes>
-              <Route path='/' element={<FormSekolah/>} />
-            </Routes>
-            ) : (
-              <Routes>
-              <Route path='/' element={<FormSekolah2/>} />
-            </Routes>
-            )}
-            
-          </>
-        ) : (
-          <>
-          {isAdmin ? ( //dashoard sd sebagai tampilan kedua
           <Routes>
-            <Route path='/' element={<DashboardSd />} />
+              <Route path='/' element={<Sd />} />
           </Routes>
-        ) : ( //dashboard smp sebagai tampilan utama
-          <Routes>
-            <Route path='/' element={<Dashboard />} />
-          </Routes>
-        )}
-          </>
-        )}
-          
         </>
-      )}
-
-      
+      )}      
     </>
   )
 }
