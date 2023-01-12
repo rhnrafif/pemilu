@@ -12,7 +12,7 @@ export default function DataTable(props) {
             </tr>
         </thead>
         {props.children}
-    </table>
+    </table> 
     
     </>
   )

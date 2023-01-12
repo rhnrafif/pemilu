@@ -13,10 +13,10 @@ export function Sekeleton() {
 
 export function SekeletonBlack(){
     return (
-    <div className='w-[320px] h-[150px] bg-[#3a3a3a] rounded-md gap-2 mx-auto shadow-lg flex justify-center items-center p-2'>
+    <div className='w-[280px] h-[200px] bg-[#202121] rounded-md gap-2 mx-auto shadow-lg flex justify-center items-center p-2'>
         
-        <div className='w-[70%] h-[90%] bg-[#6a6a6a] rounded-md animate-pulse'></div>
-        <div className='w-[25%] h-[90%] bg-[#6a6a6a] rounded-md animate-pulse'></div>
+        <div className='w-[70%] h-[90%] bg-[#3a3a3a] rounded-md animate-pulse'></div>
+        <div className='w-[25%] h-[90%] bg-[#3a3a3a] rounded-md animate-pulse'></div>
         
     </div>
   )

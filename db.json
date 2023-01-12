@@ -1,26 +1,26 @@
 {"jayabuana" : {
     "1":{
         "nomor" : "1",
-        "namaKetua" : "Raihanudin Rafif",
-        "fotoKetua" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/IKM2.jpg?t=2023-01-12T04%3A31%3A29.482Z",
-        "namaWakil": "Karim Benzema",
-        "fotoWakil" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/IKM2.jpg?t=2023-01-12T04%3A31%3A29.482Z",
+        "namaKetua" : "Shopia Alcantara",
+        "fotoKetua" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/1.jpg?t=2023-01-12T04%3A31%3A29.482Z",
+        "namaWakil": "Gerard Bastian Nuraldi",
+        "fotoWakil" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/3.jpg?t=2023-01-12T04%3A31%3A29.482Z",
         "score" : 0
     },
     "2":{
         "nomor" : "2",
-       "namaKetua" : "Raihanudin Rafif",
-        "fotoKetua" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/IKM2.jpg?t=2023-01-12T04%3A31%3A29.482Z",
-        "namaWakil": "Karim Benzema",
-        "fotoWakil" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/IKM2.jpg?t=2023-01-12T04%3A31%3A29.482Z",
+       "namaKetua" : "Reza Akbar",
+        "fotoKetua" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/4.jpg?t=2023-01-12T04%3A31%3A29.482Z",
+        "namaWakil": "Nur Aulia Syahidah",
+        "fotoWakil" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/6.jpg?t=2023-01-12T04%3A31%3A29.482Z",
         "score" : 0
     },
     "3":{
         "nomor" : "3",
-        "namaKetua" : "Raihanudin Rafif",
-        "fotoKetua" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/IKM2.jpg?t=2023-01-12T04%3A31%3A29.482Z",
-        "namaWakil": "Karim Benzema",
-        "fotoWakil" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/IKM2.jpg?t=2023-01-12T04%3A31%3A29.482Z",
+        "namaKetua" : "Farid Juhaidi",
+        "fotoKetua" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/2.jpg?t=2023-01-12T04%3A31%3A29.482Z",
+        "namaWakil": "Karim Alcatiri",
+        "fotoWakil" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/5.jpg?t=2023-01-12T04%3A31%3A29.482Z",
         "score" : 0
     }
 }

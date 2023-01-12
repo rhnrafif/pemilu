@@ -9,6 +9,7 @@ import {SmpInput} from '../user/SmpProvider'
 import { UserSet } from '../user/User'
 import VoteCard from '../components/VoteCard'
 import { useNavigate } from 'react-router-dom'
+import { Sekeleton, SekeletonBlack } from '../components/Sekeleton'
 
 export default function Dashboard() {
 
@@ -59,13 +60,13 @@ export default function Dashboard() {
       score : score + 1
     })
     .then((res)=>{
-      setSucces('Berhasil Memilih !')
+      setSucces('Terima kasih telah memilih')
       setDataPaslon({
       nomor : nomor,
       namaKetua : namaKetua,
       namaWakil : namaWakil
       })
-      setTimeout(()=>{location.reload()}, 5000)
+      setTimeout(()=>{setModal(false)}, 5000)
     })
     .catch((err)=>{
       console.error(err)
@@ -84,7 +85,7 @@ export default function Dashboard() {
 
     //validasi kedua
       let admin = prompt('Mohon tulis Identitas Anda ?')
-      if(admin !== 'rafif'){
+      if(admin !== 'qwerty'){
         alert('Maaf, akses hanya bisa untuk Panitia')
         return
       }
@@ -100,11 +101,26 @@ export default function Dashboard() {
       <div className='flex justify-center items-center mt-5 md:absolute md:top-0 md:right-4 '>
             <ButtonAdmin onClick={handleLogin} name={'ADMIN'} />
        </div>
-      <div className='container max-w-7xl mx-auto pb-8 px-5'>
-        
+      <div className='container max-w-7xl mx-auto pb-8 py-2 px-5 flex flex-col items-center justify-center'>
+        <div className='flex flex-col justify-center gap-1 items-center mt-2 md:flex-row md:gap-2'>
+          <div className='h-[30px] bg-red-700 px-1 rounded flex justify-center items-center'>
+            <h1 className='font-semibold text-base text-white'>Note !</h1>
+          </div>
+          <div className='p-2 rounded'>
+            <p className='text-sm text-center'>Cukup klik <span className='font-semibold'> SEKALI SAJA </span>  pada foto/nomor/bingkai calon untuk memilih kandidat</p>
+          </div>
+        </div>
         <JudulDashboard />
-        <div className='w-full h-full flex flex-col justify-center items-center gap-4 md:flex-row'>
-        
+        <div className='w-full h-full flex flex-col justify-center items-center gap-4 md:flex-row md:items-start'>
+          {isLogin && (
+            <>
+              <SekeletonBlack />
+              <SekeletonBlack />
+              <SekeletonBlack />
+            </>
+        )}
+        {!isLogin && (
+          <>
           {data?.map((e)=>(
             <div className='w-[280px] h-full bg-[#202121] flex flex-col items-center py-4 rounded-md gap-3 mx-auto cursor-pointer px-2' key={e.nomor} onClick={()=>{handleVote(e.nomor, e.namaKetua, e.namaWakil, e.fotoKetua, e.fotoWakil, e.score)}}>
               <>
@@ -119,8 +135,13 @@ export default function Dashboard() {
                 />                             
               </>
             </div>
-          ))}                   
+          ))}
+          </>
+        )}
+        
+                             
         </div>
+        
       </div>
       
       {modal && (
