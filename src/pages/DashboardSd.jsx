@@ -101,7 +101,7 @@ export default function Dashboard() {
       <div className='flex justify-center items-center mt-5 md:absolute md:top-0 md:right-4 '>
             <ButtonAdmin onClick={handleLogin} name={'ADMIN'} />
        </div>
-      <div className='container max-w-7xl mx-auto pb-8 py-2 px-5 flex flex-col items-center justify-center'>
+      <div className='container max-w-6xl mx-auto pb-8 py-2 px-5 flex flex-col items-center justify-center'>
         <div className='flex flex-col justify-center gap-1 items-center mt-2 md:flex-row md:gap-2'>
           <div className='h-[30px] bg-red-700 px-1 rounded flex justify-center items-center'>
             <h1 className='font-semibold text-base text-white'>Note !</h1>
@@ -122,7 +122,7 @@ export default function Dashboard() {
         {!isLogin && (
           <>
           {data?.map((e)=>(
-            <div className='w-[280px] h-full bg-[#202121] flex flex-col items-center py-4 rounded-md gap-3 mx-auto cursor-pointer px-2' key={e.nomor} onClick={()=>{handleVote(e.nomor, e.namaKetua, e.namaWakil, e.fotoKetua, e.fotoWakil, e.score)}}>
+            <div className='w-[280px] h-full bg-[#202121] flex flex-col items-center py-4 rounded-md gap-2 mx-auto cursor-pointer md:w-[300px]' key={e.nomor} onClick={()=>{handleVote(e.nomor, e.namaKetua, e.namaWakil, e.fotoKetua, e.fotoWakil, e.score)}}>
               <>
               <div className='text-white rounded-full flex justify-center items-center mx-auto'>
                 <p className='text-white text-5xl font-bold '>{e.nomor}</p>          
