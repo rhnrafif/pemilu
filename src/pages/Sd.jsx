@@ -14,6 +14,7 @@ export default function Sd() {
   const [data, setData] = useState()
   const [vote, setVote] = useState([])
   const [isLogin, setIsLogin] = useState(true)
+  const [totalSuara, setTotalSuara] = useState(0)
   const navigate = useNavigate()
   
   // state global
@@ -43,6 +44,13 @@ export default function Sd() {
 
       setData(vote)
       setIsLogin(false)
+
+      //jumlah suara
+      let total = 0;
+      vote.map((e)=>{
+        total += e.score
+      })
+      setTotalSuara(total)
     }) 
 
 
@@ -64,13 +72,15 @@ export default function Sd() {
               <>
                 {data?.map((e)=>(
                   
-                  <VoteResult key={e.nomor} namaKetua={e.namaKetua} namaWakil={e.namaWakil} fotoKetua={e.fotoKetua} fotoWakil={e.fotoWakil} score={e.score}/>
+                    <VoteResult key={e.nomor} namaKetua={e.namaKetua} namaWakil={e.namaWakil} fotoKetua={e.fotoKetua} fotoWakil={e.fotoWakil} score={e.score}/>
+                  
                 ))}
+                <div className='mt-4'>
+                  <h1 className='text-lg'>Total Suara Terkumpul : <span className='font-semibold'> {totalSuara}</span></h1>
+                </div>
               </>
           </div>
-        )}
-      
-
+        )}     
 
        <div className='flex justify-center items-center my-5'>
             <ButtonLogout name={"LOGOUT"} click={()=>{
