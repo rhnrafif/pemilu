@@ -1,26 +1,34 @@
 {"jayabuana" : {
     "1":{
         "nomor" : "1",
-        "namaKetua" : "Shopia Alcantara",
-        "fotoKetua" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/1.jpg?t=2023-01-12T04%3A31%3A29.482Z",
-        "namaWakil": "Gerard Bastian Nuraldi",
-        "fotoWakil" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/3.jpg?t=2023-01-12T04%3A31%3A29.482Z",
+        "namaKetua" : "AGUS SALAKHUDIN",
+        "fotoKetua" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/1A.jpg?t=2023-01-12T04%3A31%3A29.482Z",
+        "namaWakil": "FANIA MARTINA",
+        "fotoWakil" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/1B.jpg?t=2023-01-12T04%3A31%3A29.482Z",
         "score" : 0
     },
     "2":{
         "nomor" : "2",
-       "namaKetua" : "Reza Akbar",
-        "fotoKetua" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/4.jpg?t=2023-01-12T04%3A31%3A29.482Z",
-        "namaWakil": "Nur Aulia Syahidah",
-        "fotoWakil" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/6.jpg?t=2023-01-12T04%3A31%3A29.482Z",
+       "namaKetua" : "AHMAD YANI",
+        "fotoKetua" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/2A.jpg?t=2023-01-12T04%3A31%3A29.482Z",
+        "namaWakil": "HERDINI",
+        "fotoWakil" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/2B.jpg?t=2023-01-12T04%3A31%3A29.482Z",
         "score" : 0
     },
     "3":{
         "nomor" : "3",
-        "namaKetua" : "Farid Juhaidi",
-        "fotoKetua" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/2.jpg?t=2023-01-12T04%3A31%3A29.482Z",
-        "namaWakil": "Karim Alcatiri",
-        "fotoWakil" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/5.jpg?t=2023-01-12T04%3A31%3A29.482Z",
+        "namaKetua" : "ADITIYA PUTRA",
+        "fotoKetua" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/3A.jpg?t=2023-01-12T04%3A31%3A29.482Z",
+        "namaWakil": "SITI NURPADILAH",
+        "fotoWakil" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/3B.jpg?t=2023-01-12T04%3A31%3A29.482Z",
+        "score" : 0
+    },
+    "4":{
+        "nomor" : "4",
+        "namaKetua" : "MUHAMAD SEPTIAN",
+        "fotoKetua" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/4A.jpg?t=2023-01-12T04%3A31%3A29.482Z",
+        "namaWakil": "SYARI'AH",
+        "fotoWakil" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/4B.jpg?t=2023-01-12T04%3A31%3A29.482Z",
         "score" : 0
     }
 }

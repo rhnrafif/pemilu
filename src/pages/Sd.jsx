@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react'
 import {ButtonLogout} from '../components/Button'
 import { useNavigate } from 'react-router-dom'
 import {getAuth, GoogleAuthProvider, signInWithPopup} from 'firebase/auth'
-import {getDatabase, ref, onValue} from 'firebase/database'
+import {getDatabase, ref, onValue, set} from 'firebase/database'
 import {UserSekolah} from '../user/SekolahProvider'
 import {UserSet} from '../user/User'
 import { Sekeleton } from '../components/Sekeleton'
@@ -56,6 +56,28 @@ export default function Sd() {
 
   },[])
 
+  //handle devote by admin
+  const handleDelete = (nomor, namaKetua, namaWakil, fotoKetua, fotoWakil, score)=>{
+    
+    const db = getDatabase()
+
+    set(ref(db, 'jayabuana/' + nomor ),{
+      nomor : nomor,
+      namaKetua : namaKetua,
+      namaWakil : namaWakil,
+      fotoKetua : fotoKetua,
+      fotoWakil : fotoWakil,
+      score : (score <= 0) ? 0 : score - 1
+    })
+    .then((res)=>{
+
+    })
+    .catch((err)=>{
+      console.error(err)
+    })
+
+  }
+
 
   return (
     <div className='container max-w-md mx-auto pt-8 px-8'>
@@ -72,7 +94,15 @@ export default function Sd() {
               <>
                 {data?.map((e)=>(
                   
-                    <VoteResult key={e.nomor} namaKetua={e.namaKetua} namaWakil={e.namaWakil} fotoKetua={e.fotoKetua} fotoWakil={e.fotoWakil} score={e.score}/>
+                    <VoteResult key={e.nomor} 
+                    namaKetua={e.namaKetua} 
+                    namaWakil={e.namaWakil} 
+                    fotoKetua={e.fotoKetua} 
+                    fotoWakil={e.fotoWakil} 
+                    score={e.score}
+                    onclick={()=>{
+                      handleDelete(e.nomor, e.namaKetua, e.namaWakil, e.fotoKetua, e.fotoWakil, e.score)}}
+                    />
                   
                 ))}
                 <div className='mt-4'>

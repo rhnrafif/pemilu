@@ -10,6 +10,7 @@ import { UserSet } from '../user/User'
 import VoteCard from '../components/VoteCard'
 import { useNavigate } from 'react-router-dom'
 import { Sekeleton, SekeletonBlack } from '../components/Sekeleton'
+import ModalConfirm from '../components/ModalConfirm'
 
 export default function Dashboard() {
 
@@ -40,7 +41,7 @@ export default function Dashboard() {
       // const item2 = Object.values(item)
       setData(Object.values(item))
       setIsLogin(false)
-    }) 
+    })
 
   },[])
 
@@ -48,25 +49,21 @@ export default function Dashboard() {
   // funct hande vote
   const handleVote = (nomor, namaKetua, namaWakil, fotoKetua, fotoWakil, score)=>{
     setModal(!modal)
-    console.info(nomor)
+    setConfirm(true)
+    
     const db = getDatabase()
 
     set(ref(db, 'jayabuana/' + nomor ),{
       nomor : nomor,
       namaKetua : namaKetua,
-      fotoKetua : fotoKetua,
       namaWakil : namaWakil,
+      fotoKetua : fotoKetua,
       fotoWakil : fotoWakil,
       score : score + 1
     })
     .then((res)=>{
-      setSucces('Terima kasih telah memilih')
-      setDataPaslon({
-      nomor : nomor,
-      namaKetua : namaKetua,
-      namaWakil : namaWakil
-      })
-      setTimeout(()=>{setModal(false)}, 5000)
+      setSucces('Terimakasih telah memilih')
+      setTimeout(()=>{setConfirm(false)}, 2500)      
     })
     .catch((err)=>{
       console.error(err)
@@ -85,7 +82,7 @@ export default function Dashboard() {
 
     //validasi kedua
       let admin = prompt('Mohon tulis Identitas Anda ?')
-      if(admin !== 'qwerty'){
+      if(admin !== 'AlvinHan76'){
         alert('Maaf, akses hanya bisa untuk Panitia')
         return
       }
@@ -98,7 +95,8 @@ export default function Dashboard() {
 
   return (
     <>
-      <div className='flex justify-center items-center mt-5 md:absolute md:top-0 md:right-4 '>
+      <>
+        <div className='flex justify-center items-center mt-5 md:absolute md:top-0 md:right-4 '>
             <ButtonAdmin onClick={handleLogin} name={'ADMIN'} />
        </div>
       <div className='container max-w-6xl mx-auto pb-8 py-2 px-5 flex flex-col items-center justify-center'>
@@ -122,7 +120,17 @@ export default function Dashboard() {
         {!isLogin && (
           <>
           {data?.map((e)=>(
-            <div className='w-[280px] h-full bg-[#202121] flex flex-col items-center py-4 rounded-md gap-2 mx-auto cursor-pointer md:w-[300px]' key={e.nomor} onClick={()=>{handleVote(e.nomor, e.namaKetua, e.namaWakil, e.fotoKetua, e.fotoWakil, e.score)}}>
+            <div className='w-[280px] h-full bg-[#202121] flex flex-col items-center py-4 rounded-md gap-2 mx-auto cursor-pointer md:w-[300px]' key={e.nomor} onClick={()=>{
+              setModal(!modal)
+              setDataPaslon({
+                nomor : e.nomor,
+                namaKetua : e.namaKetua,
+                namaWakil : e.namaWakil,
+                fotoKetua : e.fotoKetua,
+                fotoWakil : e.fotoWakil,
+                score : e.score
+                })
+            }}>
               <>
               <div className='text-white rounded-full flex justify-center items-center mx-auto'>
                 <p className='text-white text-5xl font-bold '>{e.nomor}</p>          
@@ -143,18 +151,35 @@ export default function Dashboard() {
         </div>
         
       </div>
-      
+      </>
+
+      {confirm && (
+            <div className='w-screen h-full fixed top-0 left-0 z-10 bg-[#00000097] text-white mx-auto flex justify-center items-center'>
+              <div className='h-[200px]'>
+                  <Modal namaKetua={dataPaslon.namaKetua} namaWakil={dataPaslon.namaWakil} succes={succes} />
+                </div>
+            </div>
+        )}      
+        
       {modal && (
+          <>
           <div className='w-screen h-full fixed top-0 left-0 z-10 bg-[#00000097] text-white mx-auto flex justify-center items-center'>
             <div className='h-[200px]'>
-                <Modal namaKetua={dataPaslon.namaKetua} namaWakil={dataPaslon.namaWakil} succes={succes} onClick={()=>{
+              <ModalConfirm confirmasi={"Sudah yakin pilih ?"} 
+                namaKetua={dataPaslon?.namaKetua} 
+                namaWakil={dataPaslon?.namaWakil}
+                onClickYes={()=>{
+                  handleVote(dataPaslon.nomor, dataPaslon.namaKetua, dataPaslon.namaWakil, dataPaslon.fotoKetua, dataPaslon.fotoWakil ,dataPaslon.score)
+                }}
+                onClickNo={()=>{
                   setModal(!modal)
-                }} />
+                }}
+                />                
               </div>
-          </div>
-      )}
-      
-      
+          </div>            
+          </>
+      )}     
+
     </>
   )
 }

@@ -15,7 +15,7 @@ export default function Modal({namaKetua, namaWakil, onClick, succes}) {
 
             {/* <div className='w-32 h-10 flex justify-center items-center rounded-md bg-sky-600 text-white cursor-pointer mt-4' onClick={onClick}>OK</div> */}
             <div className='w-full h-10 flex justify-center items-center rounded-md text-black cursor-pointer animate-pulse'>
-              Mohon tunggu . . .</div>
+              Loading..</div>
         </div>
     </>
   )
