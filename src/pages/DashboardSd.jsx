@@ -65,7 +65,7 @@ export default function Dashboard() {
     })
     .then((res)=>{
       setSucces('Terimakasih telah memilih')
-      setTimeout(()=>{setConfirm(false)}, 1500)      
+      setTimeout(()=>{setConfirm(false)}, 3000)      
     })
     .catch((err)=>{
       console.error(err)
