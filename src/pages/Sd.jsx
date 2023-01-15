@@ -80,18 +80,20 @@ export default function Sd() {
 
 
   return (
-    <div className='container max-w-md mx-auto pt-8 px-8'>
-       <div className='flex justify-center gap-4 mt-4 mb-5'>
-            <h1 className='text-2xl font-semibold text-black text-center'>Hasil Pemilihan Ketua OSIS 2023</h1>
-       </div>
+    <div className='container max-w-6xl mx-auto px-8 relative'>
+       
+        <div className='max-w-[40%] mx-auto my-5 '>
+          <img src="https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/logofield.png" alt="" />
+        </div>
 
         {isLogin && (
           <Sekeleton />
         )}
 
         {!isLogin && (
-          <div className='w-full  max-w-[400px] bg-slate-100  flex flex-col items-center mx-auto rounded-lg pb-4 pt-3 gap-3 '>
+          <div className='w-full max-w-5xl bg-slate-100  flex flex-col items-center mx-auto rounded-lg pb-4 pt-3 gap-3 px-3 shadow'>
               <>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
                 {data?.map((e)=>(
                   
                     <VoteResult key={e.nomor} 
@@ -105,6 +107,7 @@ export default function Sd() {
                     />
                   
                 ))}
+              </div>
                 <div className='mt-4'>
                   <h1 className='text-lg'>Total Suara Terkumpul : <span className='font-semibold'> {totalSuara}</span></h1>
                 </div>

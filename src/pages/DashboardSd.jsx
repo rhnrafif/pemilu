@@ -33,6 +33,7 @@ export default function Dashboard() {
   useEffect(()=>{
     
     const db = getDatabase()
+    
 
     const starCountRef = ref(db, 'jayabuana')
     onValue(starCountRef, (snapshot)=>{
@@ -52,6 +53,7 @@ export default function Dashboard() {
     setConfirm(true)
     
     const db = getDatabase()
+    
 
     set(ref(db, 'jayabuana/' + nomor ),{
       nomor : nomor,
@@ -63,7 +65,7 @@ export default function Dashboard() {
     })
     .then((res)=>{
       setSucces('Terimakasih telah memilih')
-      setTimeout(()=>{setConfirm(false)}, 2500)      
+      setTimeout(()=>{setConfirm(false)}, 1500)      
     })
     .catch((err)=>{
       console.error(err)
@@ -96,11 +98,11 @@ export default function Dashboard() {
   return (
     <>
       <>
-        <div className='flex justify-center items-center mt-5 md:absolute md:bottom-2 md:right-4 '>
+        <div className='flex justify-center items-center mt-[5px] sm:mt-[5px] md:absolute md:bottom-2 md:right-2 '>
             <ButtonAdmin onClick={handleLogin} name={'ADMIN'} />
        </div>
-      <div className='container max-w-6xl mx-auto pb-8 py-2 px-5 flex flex-col items-center justify-center'>
-        <div className='flex flex-col justify-center gap-1 items-center mt-2 md:flex-row md:gap-2'>
+      <div className='container max-w-6xl mx-auto pb-8 py-2 px-5 flex flex-col items-center justify-center relative'>
+        {/* <div className='flex flex-col justify-center gap-1 items-center mt-2 md:flex-row md:gap-2'>
           <div className='h-[30px] bg-red-700 px-1 rounded flex justify-center items-center'>
             <h1 className='font-semibold text-base text-white'>Note !</h1>
           </div>
@@ -108,8 +110,18 @@ export default function Dashboard() {
             <p className='text-sm text-center'>Cukup klik <span className='font-semibold'> SEKALI SAJA </span>  pada foto/nomor/bingkai calon untuk memilih kandidat</p>
           </div>
         </div>
-        <JudulDashboard />
-        <div className='w-full h-full flex flex-col justify-center items-center gap-4 md:flex-row md:items-start'>
+        <JudulDashboard /> */}
+        <div className='max-w-[80%] sm:max-w-[60%] md:absolute md:max-w-[30%] md:top-2 md:right-[10px] lg:-right-[30px]'>
+          <img src="https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/logofield.png" alt="" />
+        </div>
+        <div className='my-5 sm:max-w-[70%] md:absolute md:max-w-[50%] md:top-[80px]'>
+          <img src="https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/text.png" alt="" />
+        </div>
+        <div className='sm:max-w-[80%] mb-5 md:absolute md:max-w-[55%] md:top-4 md:left-[10px] lg:-left-0'>
+          <img src="https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/note.png" alt="" />
+        </div>
+
+        <div className='w-full h-full flex flex-col justify-center items-center gap-4 md:mt-[200px] md:flex-row md:items-start md:mb-5'>
           {isLogin && (
             <>
               <SekeletonBlack />
@@ -133,7 +145,7 @@ export default function Dashboard() {
             }}>
               <>
               <div className='text-white rounded-full flex justify-center items-center mx-auto'>
-                <p className='text-white text-5xl font-bold '>{e.nomor}</p>          
+                <p className='text-white text-4xl font-bold '>{e.nomor}</p>          
               </div>
               <VoteCard 
                 fotoKetua={e.fotoKetua} 
