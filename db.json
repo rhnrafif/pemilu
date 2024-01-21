@@ -17,10 +17,10 @@
     },
     "3":{
         "nomor" : "3",
-        "namaKetua" : "APRILIANITA",
-        "fotoKetua" : "https://hqnskqdwchhmelszdjer.supabase.co/storage/v1/object/public/jbpemilu/3_CalonWakilKetuaOsis_Aprilianita.png",
-        "namaWakil": "REVALYA ZALFAZIAH",
-        "fotoWakil" : "https://hqnskqdwchhmelszdjer.supabase.co/storage/v1/object/public/jbpemilu/3_CalonKetuaOsis_RevalyaZalfaziah.png",
+        "namaKetua" : "REVALYA ZALFAZIAH",
+        "fotoKetua" : "https://hqnskqdwchhmelszdjer.supabase.co/storage/v1/object/public/jbpemilu/3_CalonKetuaOsis_RevalyaZalfaziah.png",
+        "namaWakil": "APRILIANITA",
+        "fotoWakil" : "https://hqnskqdwchhmelszdjer.supabase.co/storage/v1/object/public/jbpemilu/3_CalonWakilKetuaOsis_Aprilianita.png",
         "score" : 0
     },
     "4":{
