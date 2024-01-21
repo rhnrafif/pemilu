@@ -6,9 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'hero-pattern': "url('https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/bg.svg')",
-      }
+      // backgroundImage: {
+      //   'hero-pattern': "url('https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/bg.svg')",
+      // }
     },
   },
   plugins: [],

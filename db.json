@@ -1,34 +1,34 @@
 {"jayabuana" : {
     "1":{
         "nomor" : "1",
-        "namaKetua" : "AGUS SALAKHUDIN",
-        "fotoKetua" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/1A.jpg?t=2023-01-12T04%3A31%3A29.482Z",
-        "namaWakil": "FANIA MARTINA",
-        "fotoWakil" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/1B.jpg?t=2023-01-12T04%3A31%3A29.482Z",
+        "namaKetua" : "JUHRI",
+        "fotoKetua" : "https://hqnskqdwchhmelszdjer.supabase.co/storage/v1/object/public/jbpemilu/1_CalonKetuaOsis_Juhri.png",
+        "namaWakil": "MEFA WULANDARI",
+        "fotoWakil" : "https://hqnskqdwchhmelszdjer.supabase.co/storage/v1/object/public/jbpemilu/1_CalonWakilKetuaOsis_Mela%20Wulandari.png",
         "score" : 0
     },
     "2":{
         "nomor" : "2",
-       "namaKetua" : "AHMAD YANI",
-        "fotoKetua" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/2A.jpg?t=2023-01-12T04%3A31%3A29.482Z",
-        "namaWakil": "HERDINI",
-        "fotoWakil" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/2B.jpg?t=2023-01-12T04%3A31%3A29.482Z",
+       "namaKetua" : "ADITIA FIRANSYAH",
+        "fotoKetua" : "https://hqnskqdwchhmelszdjer.supabase.co/storage/v1/object/public/jbpemilu/2_CalonKetuaOsis_AditiaFiransyah.png",
+        "namaWakil": "FANNY MELATI PUTRI",
+        "fotoWakil" : "https://hqnskqdwchhmelszdjer.supabase.co/storage/v1/object/public/jbpemilu/2_CalonWakilKetuaOsis_FannyMelatiPutri.png",
         "score" : 0
     },
     "3":{
         "nomor" : "3",
-        "namaKetua" : "ADITIYA PUTRA",
-        "fotoKetua" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/3A.jpg?t=2023-01-12T04%3A31%3A29.482Z",
-        "namaWakil": "SITI NURPADILAH",
-        "fotoWakil" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/3B.jpg?t=2023-01-12T04%3A31%3A29.482Z",
+        "namaKetua" : "APRILIANITA",
+        "fotoKetua" : "https://hqnskqdwchhmelszdjer.supabase.co/storage/v1/object/public/jbpemilu/3_CalonWakilKetuaOsis_Aprilianita.png",
+        "namaWakil": "REVALYA ZALFAZIAH",
+        "fotoWakil" : "https://hqnskqdwchhmelszdjer.supabase.co/storage/v1/object/public/jbpemilu/3_CalonKetuaOsis_RevalyaZalfaziah.png",
         "score" : 0
     },
     "4":{
         "nomor" : "4",
-        "namaKetua" : "MUHAMAD SEPTIAN",
-        "fotoKetua" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/4A.jpg?t=2023-01-12T04%3A31%3A29.482Z",
-        "namaWakil": "SYARI'AH",
-        "fotoWakil" : "https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/4B.jpg?t=2023-01-12T04%3A31%3A29.482Z",
+        "namaKetua" : "MUHAMMAD FAIZ AZHAR FIRDAUS",
+        "fotoKetua" : "https://hqnskqdwchhmelszdjer.supabase.co/storage/v1/object/public/jbpemilu/4_CalonKetuaOsis_Muhammad%20Faiz%20Azhar%20Firdaus.png",
+        "namaWakil": "MARCHA RESTU PURWITA",
+        "fotoWakil" : "https://hqnskqdwchhmelszdjer.supabase.co/storage/v1/object/public/jbpemilu/4_CalonWakilKetuaOsis_MarchaRestuPurwita.png",
         "score" : 0
     }
 }

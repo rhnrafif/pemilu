@@ -82,8 +82,20 @@ export default function Sd() {
   return (
     <div className='container max-w-6xl mx-auto px-8 relative'>
        
-        <div className='max-w-[40%] mx-auto my-5 '>
-          <img src="https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/logofield.png" alt="" />
+        {/* <div className='max-w-[10%] mx-auto my-5 '>
+          <img src="https://hqnskqdwchhmelszdjer.supabase.co/storage/v1/object/public/jbpemilu/JBLogo.png" alt="" />
+        </div> */}
+
+        <div className='w-fit flex flex-col sm:flex-row justify-center items-center md:pr-0'>
+            <div className='max-w-[30%] sm:max-w-[15%] md:max-w-[10%]'>
+              <img src="https://hqnskqdwchhmelszdjer.supabase.co/storage/v1/object/public/jbpemilu/JBLogo.png" alt="" />
+            </div>
+            <div className='max-w-[35%] sm:max-w-[15%] md:max-w-[15%]'>
+              <img src="https://hqnskqdwchhmelszdjer.supabase.co/storage/v1/object/public/jbpemilu/OsisLogow.png" alt="" />
+            </div>
+          <div className='w-[50%] my-2 sm:max-w-[35%] md:max-w-[35%]'>
+            <img src="https://hqnskqdwchhmelszdjer.supabase.co/storage/v1/object/public/jbpemilu/LogoJayaBuanaElection2024w.png" alt="" />
+          </div>
         </div>
 
         {isLogin && (

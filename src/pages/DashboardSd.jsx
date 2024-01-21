@@ -111,19 +111,29 @@ export default function Dashboard() {
           </div>
         </div>
         <JudulDashboard /> */}
-        <div className='max-w-[80%] sm:max-w-[60%] md:absolute md:max-w-[30%] md:top-2 md:right-[10px] lg:-right-[30px]'>
-          <img src="https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/logofield.png" alt="" />
-        </div>
-        <div className='my-5 sm:max-w-[70%] md:absolute md:max-w-[50%] md:top-[80px]'>
-          <img src="https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/text.png" alt="" />
-        </div>
-        <div className='sm:max-w-[80%] mb-5 md:absolute md:max-w-[55%] md:top-4 md:left-[10px] lg:-left-0'>
-          <img src="https://sopylahpssmjazexqnfk.supabase.co/storage/v1/object/public/jayabuana/note.png" alt="" />
+        
+        <div className='w-full flex flex-col sm:flex-row justify-center items-center sm:pr-[80px] md:pr-0'>
+          <div className='w-fit h-fit flex flex-row justify-center sm:mr-5 md:justify-start items-center gap-3'>
+            <div className='max-w-[30%] sm:max-w-[15%] md:max-w-[15%]'>
+              <img src="https://hqnskqdwchhmelszdjer.supabase.co/storage/v1/object/public/jbpemilu/JBLogo.png" alt="" />
+            </div>
+            <div className='max-w-[35%] sm:max-w-[15%] md:max-w-[20%]'>
+              <img src="https://hqnskqdwchhmelszdjer.supabase.co/storage/v1/object/public/jbpemilu/OsisLogow.png" alt="" />
+            </div>
+          </div>
+          <div className='w-[50%] my-2 max-w-[80%] sm:max-w-[70%] md:max-w-[60%]'>
+            <img src="https://hqnskqdwchhmelszdjer.supabase.co/storage/v1/object/public/jbpemilu/LogoJayaBuanaElection2024w.png" alt="" />
+          </div>
         </div>
 
-        <div className='w-full h-full flex flex-col justify-center items-center gap-4 md:mt-[200px] md:flex-row md:items-start md:mb-5'>
+        <div className='w-full flex flex-col justify-center items-center my-6 gap-2 px-7'>
+            <p className='font-bold text-4xl text-center'>Pilih Calon Ketua Dan Wakil Ketua Pilihanmu!</p>
+            <p className='font-semibold text-lg text-red-500'>Suara Anda, Suara Masa Depan</p>
+        </div>
+        <div className='w-full h-full flex flex-col justify-center items-center gap-4 md:mt-[20px] md:flex-row md:items-start md:mb-5'>
           {isLogin && (
             <>
+              <SekeletonBlack />
               <SekeletonBlack />
               <SekeletonBlack />
               <SekeletonBlack />
@@ -131,6 +141,7 @@ export default function Dashboard() {
         )}
         {!isLogin && (
           <>
+          
           {data?.map((e)=>(
             <div className='w-[280px] h-full bg-[#202121] flex flex-col items-center py-4 rounded-md gap-2 mx-auto cursor-pointer md:w-[300px]' key={e.nomor} onClick={()=>{
               setModal(!modal)
@@ -175,6 +186,7 @@ export default function Dashboard() {
         
       {modal && (
           <>
+          
           <div className='w-screen h-full fixed top-0 left-0 z-10 bg-[#00000097] text-white mx-auto flex justify-center items-center'>
             <div className='h-[200px]'>
               <ModalConfirm confirmasi={"Sudah yakin pilih ?"} 

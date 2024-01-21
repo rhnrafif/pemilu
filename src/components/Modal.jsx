@@ -3,11 +3,11 @@ import React from 'react'
 export default function Modal({namaKetua, namaWakil, onClick, succes}) {
   return (
     <>
-        <div className='w-[280px] h-[180px] py-4 bg-slate-300 flex flex-col gap-4 justify-center items-center rounded-md'>
+        <div className='w-fit min-w-[280px] h-[180px] py-4 bg-slate-300 flex flex-col gap-4 justify-center items-center rounded-md'>
           
             <h1 className='text-lg font-semibold text-[#212121]'>{succes}</h1>
 
-            <div className='w-[80%] h-[120px] flex flex-col justify-center items-center outline outline-sky-700 rounded  py-2'>
+            <div className='min-w-[80%] w-fit h-[120px] flex flex-col justify-center items-center outline outline-sky-700 rounded mx-7  p-2'>
               <p className='text-[#212121] font-semibold mx-auto '>{namaKetua}</p>
               <p className='text-[#212121] font-semibold text-xs mx-auto '>&</p>
               <p className='text-[#212121] font-semibold mx-auto '>{namaWakil}</p>
